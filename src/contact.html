@@ -22,11 +22,60 @@
     <!--Custom style-->
     <link rel="stylesheet" href="./style.css">
   </head>
-<body class="px-80">
+<body >
  <header></header>
 
  <main>
-  <h1>Welcome to contacts page</h1>
+  <section id="fancy-form">
+    <div class="container">
+     <div class="form-sections">
+       <!-- Form left -->
+       <div class="Form-left">
+         <h1>Get In Touch</h1>
+         <div class="line1"></div> <!--border-bottom line-->
+         <p class="p"> Our team is here to help :)</p><br>
+         
+           <div class="contact-info">
+             <div><i class="fas fa-map-marker-alt"></i>Aspin Commercial Tower, Dubai, UAE</div>
+             <div><i class="fas fa-envelope"></i>contact@email.com</div>
+             <div><i class="fas fa-phone"></i>+971 0000 000 000</div>
+             <div><i class="fas fa-clock"></i>Mon - sat 9:00 AM to 6:00 PM</div>
+       </div>
+       </div>
+ 
+       <!-- form right -->
+       
+       <div class="Form-right">
+         <h1>Contact Us</h1>
+         <div class="line"></div>
+         <!-- form -->
+         <form action="">
+           <div  class="col-sm-12 mb-3 col-md-12 col-lg-6 ">
+             <h5>NAME</h5>
+             <input type="text" class="form-control input-form style2 fw-light" name="fname" id="inputFname" placeholder=" Name" maxlength="20" required >
+             <div class="nameFError text-danger"></div>  
+             </div>
+           
+           <div class="col-sm-12 mb-3 col-md-12 col-lg-6">
+             <h5>EMAIL</h5>
+             <input type="email" class="form-control  d-block col-12 w-100 input-form style2 fw-light" name="email" id="inputEmail" placeholder="Email Address " required>
+             <div class="emailError text-danger"></div>
+             </div>
+           <h5>PHONE</h5>
+           <div class="col-sm-12 col-md-12 col-lg-6 mb-3 ">
+             <input type="tel" class="form-control  d-block col-12 w-100 fw-light input-form style2 " name="phone" id="phone" placeholder="Contact Number" pattern="[0-9]{10}"  required>
+             </div>
+           <h5>YOUR MESSAGE </h5>
+           <div class="col  ">
+             <textarea class="form-control input-form style2 fw-light " name="message" id="message" rows="5" placeholder="How can we help?" minlength="5" required></textarea>
+             <div class="messageError text-danger"></div>
+             </div>
+           <button>Send</button>
+         </form>
+       </div>
+     </div>
+     </div>
+   </section>
  </main>
 
  <footer></footer>
