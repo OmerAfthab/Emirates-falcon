@@ -20,7 +20,7 @@
   --gunmetal-1: hsl(229, 15%, 21%);
   --gunmetal-2: hsl(216, 22%, 18%);
   --gainsboro: hsl(0, 7%, 88%);
-  --citrine: hsl(57, 97%, 45%);
+  --citrine: #B68C32;
   --xiketic: hsl(253, 21%, 13%);
   --grey:rgba(136, 133, 133, 0.3);
         
@@ -98,7 +98,7 @@
 }
 
 /* Contact-us page css starts here */
-body{
+.contact{
     padding: 0;
     font-family: 'Poppins', sans-serif;
     margin: 0;
@@ -172,15 +172,12 @@ body{
     padding-left: 50px !important;
     font-size: 18px;
   }
-  .fas{
-    color: rgb(182, 140, 50) ;
-  }
   
   .contact-info i{
-    margin-right: 20px !important;
+    margin-right: 17px !important;
     font-size: 25px;
   }
-   
+  
   
    /* Form Right Styling */
    .Form-right h1{
@@ -253,7 +250,12 @@ body{
        border-radius: 50px;
        cursor: pointer;
     }
-   
+    form button:hover {
+      background: transparent;
+      color: var(--citrine);
+      border: 2px solid var(--citrine);
+      transition: 0.4s ease-in;
+    }
    
     /* media queries */
       @media (max-width: 968px){
