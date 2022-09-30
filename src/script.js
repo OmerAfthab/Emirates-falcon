@@ -51,6 +51,14 @@ window.addEventListener("scroll", function () {
 
 });
 
+  /**
+   * Initiate glightbox
+   */
+   const glightbox = GLightbox({
+    selector: '.glightbox'
+  });
+
+
 //coming soon js
 
 var CountDownDate = new Date("Mar 15, 2023 12:00:00").getTime();
