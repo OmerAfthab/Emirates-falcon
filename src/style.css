@@ -521,8 +521,9 @@ body { top: 0px !important; }
 \*-----------------------------------*/
 
 .hero {
-  background: url("./assets/images/hero-bg.jpg") no-repeat;
-  /* background: url("./assets/images/bg-homeeee.jpg") no-repeat; */
+  background: black;
+  /* background: url("./assets/images/hero-bg.jpg") no-repeat; */
+  background: url("./assets/images/backHome.jpg") no-repeat;
   background-size: cover;
   background-position: center;
   min-height: 750px;

@@ -51,12 +51,7 @@ window.addEventListener("scroll", function () {
 
 });
 
-  /**
-   * Initiate glightbox
-   */
-   const glightbox = GLightbox({
-    selector: '.glightbox'
-  });
+ 
 
 
 //coming soon js
@@ -103,3 +98,10 @@ var countdownfunction = setInterval(function() {
 function googleTranslateElementInit() {
   new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: "en,ar,ur", layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
 }
+
+ /**
+   * Initiate glightbox
+   */
+  const glightbox = GLightbox({
+    selector: '.glightbox'
+  });
