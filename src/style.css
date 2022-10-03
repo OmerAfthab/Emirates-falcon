@@ -127,7 +127,7 @@ body.active { overflow: hidden; }
   */
   
   .page-heading-shows-events {
-    background-image: url('./assets/images/shows_events_bg.jpg');
+    background-image: url('./assets/images/gears-gd56759896_1920.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     padding: 110px 0px;
@@ -360,6 +360,9 @@ body.active { overflow: hidden; }
   }
   
   .featured-content {
+    background: url('./assets/images/web-g27593c245_1920.jpg') no-repeat;
+    background-position: center;
+    background-size: cover;
     height: 50vh;
     padding: 50px;
   }
