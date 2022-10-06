@@ -521,4 +521,60 @@ body.active { overflow: hidden; }
     max-width: 50px;
     filter: invert(1);
   }
-  
+  /* episode css  */
+.episode-hero {
+  background-image: url('./assets/images/web-g27593c245_1920.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  height: 54vh;
+}
+.item {
+  background-image: url('./assets/images/bggggggg.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 13rem;
+}
+.owl-carousel {
+  height: 14rem !important;
+
+}
+.item-details{
+  opacity: 0;
+}
+.item-details:hover {
+ opacity: 1;
+}
+.item:hover .item-details {
+  opacity: 1;
+}
+.episode-name{
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.item:hover .episode-name {
+ opacity: 0 !important;
+}
+.btn-golden{
+  background-color: var(--citrine);
+}
+
+
+.owl-prev, .owl-next {
+  font-size: 3rem !important;
+}
+
+.owl-nav {
+  padding: 0 17px;
+  position: relative;
+  top: -9rem;
+  display: flex;
+  justify-content: space-between;
+  height: 0;
+}
