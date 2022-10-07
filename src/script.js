@@ -1,4 +1,8 @@
-'use strict';
+
+
+  // session page code
+  
+  'use strict';
 
 /**
  * navbar variables
