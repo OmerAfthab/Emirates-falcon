@@ -1,108 +1,83 @@
 
-
-  // session page code
+ 
   
   'use strict';
 
-/**
- * navbar variables
- */
 
-const navOpenBtn = document.querySelector("[data-menu-open-btn]");
-const navCloseBtn = document.querySelector("[data-menu-close-btn]");
-const navbar = document.querySelector("[data-navbar]");
-const overlay = document.querySelector("[data-overlay]");
 
-const navElemArr = [navOpenBtn, navCloseBtn, overlay];
+  // session page code
+  
+  const arrows = document.querySelectorAll(".arrow");
+const movieLists = document.querySelectorAll(".movie-list");
 
-for (let i = 0; i < navElemArr.length; i++) {
-
-  navElemArr[i].addEventListener("click", function () {
-
-    navbar.classList.toggle("active");
-    overlay.classList.toggle("active");
-    document.body.classList.toggle("active");
-
+arrows.forEach((arrow, i) => {
+  const itemNumber = movieLists[i].querySelectorAll("img").length;
+  let clickCounter = 0;
+  arrow.addEventListener("click", () => {
+    const ratio = Math.floor(window.innerWidth / 270);
+    clickCounter++;
+    if (itemNumber - (4 + clickCounter) + (4 - ratio) >= 0) {
+      movieLists[i].style.transform = `translateX(${
+        movieLists[i].computedStyleMap().get("transform")[0].x.value - 300
+      }px)`;
+    } else {
+      movieLists[i].style.transform = "translateX(0)";
+      clickCounter = 0;
+    }
   });
 
-}
-
-
-
-/**
- * header sticky
- */
-
-const header = document.querySelector("[data-header]");
-
-window.addEventListener("scroll", function () {
-
-  window.scrollY >= 10 ? header.classList.add("active") : header.classList.remove("active");
-
+  console.log(Math.floor(window.innerWidth / 270));
 });
 
 
 
-/**
- * go top
- */
+const ball = document.querySelector(".toggle-ball");
+const items = document.querySelectorAll(
+  ".container,.movie-list-title,.navbar-container,.sidebar,.left-menu-icon,.toggle"
+);
 
-const goTopBtn = document.querySelector("[data-go-top]");
-
-window.addEventListener("scroll", function () {
-
-  window.scrollY >= 500 ? goTopBtn.classList.add("active") : goTopBtn.classList.remove("active");
-
-});
-
- 
+// ball.addEventListener("click", () => {
+//   items.forEach((item) => {
+//     item.classList.toggle("active");
+//   });
+//   ball.classList.toggle("active");
+// });
 
 
-//coming soon js
 
-var CountDownDate = new Date("Mar 15, 2023 12:00:00").getTime();
-
-var countdownfunction = setInterval(function() {
-
-    var TimeNow = new Date().getTime();
-    var distance = CountDownDate - TimeNow;
-    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-    document.getElementById("c_days").innerHTML = days
-    document.getElementById("c_hours").innerHTML = hours 
-    document.getElementById("c_minutes").innerHTML = minutes 
-    document.getElementById("c_seconds").innerHTML = seconds
-
-    if (distance < 0) {
-        clearInterval(countdownfunction);
-        document.getElementById("c_days").innerHTML = "0 <br> Days";
-    }
-
-    if (distance < 0) {
-        clearInterval(countdownfunction);
-        document.getElementById("c_hours").innerHTML = "0 <br> Hours";
-    }
-
-    if (distance < 0) {
-        clearInterval(countdownfunction);
-        document.getElementById("c_minutes").innerHTML = "0 <br> Minutes";
-    }
-
-    if (distance < 0) {
-        clearInterval(countdownfunction);
-        document.getElementById("c_seconds").innerHTML = "0 <br> Seconds";
-    }
-
-}, 1000);
-
-// google select language 
-function googleTranslateElementInit() {
-  new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: "en,ar,ur", layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
-}
-
+// $('.owl-carousel').owlCarousel({
+//   items:1,
+//   merge:true,
+//   loop:true,
+//   margin:5,
+//   video:true,
+//   lazyLoad:true,
+//   center:true,
+//   responsive:{
+//       480:{
+//           items:2
+//       },
+//       600:{
+//           items:3
+//       }
+//   }
+// })
+$('.owl-carousel').owlCarousel({
+  loop:true,
+  margin:10,
+  nav:true,
+  responsive:{
+      0:{
+          items:1
+      },
+      600:{
+          items:3
+      },
+      1000:{
+          items:4
+      }
+  }
+})
  /**
    * Initiate glightbox
    */
