@@ -2010,22 +2010,21 @@ Shows Events Page
         text-align: left;
            }
            #fancy-form{
-  
              height: auto;
            }
            #fancy-form .container{
             width: 100%;
+            padding-top: 3rem !important;
           }
  
        .form-sections .Form-right{
         padding-top: 2rem !important;
          padding: 0 10px;
+         
           }
-          .form-sections{
-  
-             margin-top: 1.5rem;
-           }
+         
            .contact-info{
+          
              margin-top: -1rem;
             line-height: 35px !important;
             padding-left: 50px !important;

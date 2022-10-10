@@ -23,9 +23,11 @@
 
     <!--Custom style-->
     <link rel="stylesheet" href="./style.css">
+
+ 
   </head>
 <body id="top"> 
-   <header></header>
+   <div id="header"></div>
   <main>
     <article>
 
@@ -519,11 +521,11 @@
 
 
 
-
+<div id="footer-space"></div>
   <!-- 
     - #FOOTER
   -->
-  <footer id="footer" class="footer footer-top  text-white">
+  <!-- <footer id="footer" class="footer footer-top  text-white">
 
     <div class="container">
       <div class="row gy-4">
@@ -620,13 +622,12 @@
 
       </div>
     </div>
-    <!-- Designed by <a href="http://www.huntfortech.com/" target="_blank">HuntForTech</a> -->
     <div class="mt-md-5">
       <p class="d-flex justify-content-center"> &copy; Copyright <span class="ms-1"> EmiratesFalcons </span>. All Rights Reserved</p>
     </div>
     
 
-  </footer>
+  </footer> -->
 
 
 
@@ -643,8 +644,13 @@
 
 
 
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+  <script
+  src="https://code.jquery.com/jquery-3.6.1.min.js"
+  integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+  crossorigin="anonymous"></script>
+
 
   <!-- glightbox video player js -->
 
@@ -656,6 +662,13 @@
     - custom js link
   -->
   <script src="./script.js" defer></script>
+
+<script>
+   $(function(){
+        $("#header").load("./header.html")
+        $("#footer-space").load("./footer.html")
+      })
+</script>
 
 </body>
 

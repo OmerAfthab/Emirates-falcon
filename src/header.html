@@ -31,7 +31,7 @@
 
   <header class="header px-md-2" data-header>
     <div class="container d-flex justify-content-between align-items-center">
-      <div class="overlay" data-overlay></div>
+      <div class="overlay data-overlay" data-overlay></div>
      
      <div class="d-flex justify-content-between align-items-center">
       <img src="./assets/images/logo.svg" alt="" class="img-fluid d-none d-md-block">
@@ -57,14 +57,14 @@
         
       </div>
   
-      <button class="menu-open-btn mb-3" data-menu-open-btn >
+      <button class="menu-open-btn mb-3 inayat" data-menu-open-btn >
        
         <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
           <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
         </svg>
       </button>
   
-      <nav class="navbar" data-navbar>
+      <nav class="navbar  data-navbar" data-navbar>
         <div class="d-md-none navbar-top d-flex justify-content-between align-items-center my-3 px-3">
   
           <a href="./index.html" class="logo">
@@ -139,6 +139,32 @@
     - custom js link
   -->
   <script src="./script.js" defer></script>
+  <script>
+    const navOpenBtn = document.querySelector("[data-menu-open-btn]");
+const navCloseBtn = document.querySelector("[data-menu-close-btn]");
+const navbar = document.querySelector("[data-navbar]");
+const overlay = document.querySelector("[data-overlay]");
+
+const navElemArr = [navOpenBtn, navCloseBtn, overlay];
+
+for (let i = 0; i < navElemArr.length; i++) {
+
+  navElemArr[i].addEventListener("click", function () {
+
+    navbar.classList.toggle("active");
+    overlay.classList.toggle("active");
+    document.body.classList.toggle("active");
+
+  });
+}
+const header = document.querySelector("[data-header]");
+
+window.addEventListener("scroll", function () {
+
+  window.scrollY >= 10 ? header.classList.add("active") : header.classList.remove("active");
+
+});
+  </script>
 
 </body>
 
