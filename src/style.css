@@ -1476,7 +1476,7 @@ Shows Events Page
     color: white;
     height: 75vh;
   }
-  .item {
+  .owl-carousel .item {
     background-image: url('./assets/images/bggggggg.jpg');
     background-position: center;
     background-repeat: no-repeat;
@@ -2124,7 +2124,7 @@ Shows Events Page
     color: #fff !important;
   }
   .amb-sec {
-    min-height: 120vh;
+    min-height: 150vh;
     height: auto;
   }
   .amb-bg {
@@ -2253,19 +2253,19 @@ Shows Events Page
           box-shadow: 0 19px 38px rgba(0,0,0,0.10), 0 15px 12px rgba(0,0,0,0.02);
       }
       
-      #customers-teams .item {
+      #customers-teams .teams-item {
          height:200px !important;
           text-align: center;
           padding: 50px;
           margin-bottom:80px;
-          opacity: .2;
+          opacity: 0.2;
           -webkit-transform: scale3d(0.8, 0.8, 1);
           transform: scale3d(0.8, 0.8, 1);
           -webkit-transition: all 0.3s ease-in-out;
           -moz-transition: all 0.3s ease-in-out;
           transition: all 0.3s ease-in-out;
           }
-      #customers-teams .owl-item.active.center .item {
+      #customers-teams .owl-item.active.center .teams-item {
           opacity: 1;
           -webkit-transform: scale3d(1.0, 1.0, 1);
           transform: scale3d(1.0, 1.0, 1);
