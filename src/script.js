@@ -1,16 +1,6 @@
 
 
 
- /**
-   * Initiate glightbox
-   */
-  const glightbox = GLightbox({
-    selector: '.glightbox'
-  });
-
-/**
- * navbar variables
- */
 
 
 
@@ -215,4 +205,7 @@ function validateMessage() {
   return true;
   
 }
+
+
+// about us 
 
